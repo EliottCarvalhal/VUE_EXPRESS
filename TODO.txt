@@ -1,0 +1,48 @@
+
+remember to start two clients;
+
+frontend (runs on port 3000):
+
+* cd C:\Users\carva\OneDrive\Skrivbord\react_proj\client 
+* npm run dev
+
+backend (runs on port 5000):
+
+* cd C:\Users\carva\OneDrive\Skrivbord\react_proj\server
+* npm start
+
+mongoDB :
+
+* mongod
+* mongosh
+
+
+github push : 
+
+git branch -c "branchname" --> git add file_path (. for all )--> git commit -m "changes"--> git push origin HEAD --> pull request
+
+
+--------------------------------------------------------------------------
+                        Things to look into
+--------------------------------------------------------------------------
+
+
+
+* look into how vite works
+
+* finish up product controller, then some simple frontend dev maybe?
+
+
+--------------------------------------------------------------------------
+                        Problems & Their fixes
+--------------------------------------------------------------------------
+
+* GET postman tests only displays _id and __v, need other fields displayed -- forgot to check JSON when sending RAW data
+
+* mysterious POST req not working Postman, works with GET? -- restart backend, possibly reset system
+
+* 404 for every product req -- server.js didn't get pushed to github, no controller in the file 
+
+
+
+
