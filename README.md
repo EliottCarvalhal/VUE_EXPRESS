@@ -2,4 +2,4 @@
 Simple SPA web development 
 
 
-Node / Express / React / Vue / Vite 
+Node / Express  / Vue 
