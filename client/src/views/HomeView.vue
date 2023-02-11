@@ -1,9 +1,20 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import homePage from "../components/homePage.vue";
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+
+<homePage>
+</homePage>
+
 </template>
+
+<style>
+
+.body {
+  background-color: #001;
+
+}
+
+
+</style>
