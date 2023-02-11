@@ -46,7 +46,8 @@ router.post('/api/users', function(req,res){
 router.put('/api/users/:id', function(req,res){
     var id = req.params.id
     User.findById(id, function (err,user){
-        if(err) {return next(err)}
+        if(err) {
+            return next(err)}
         if(user == null){
             res.status(404).json({
                 "message": "User not found"
@@ -54,8 +55,11 @@ router.put('/api/users/:id', function(req,res){
         }
         user.username = req.body.username
         user.pwd = req.body.pwd
+        user.wallet = req.body.wallet
         user.save(function(err){
-            if(err){return next(err)}
+            if(err){
+                console.log("there")
+                return next(err)}
             res.status(200).json(user)
         })
     })
@@ -71,6 +75,7 @@ router.patch('/api/users/:id', function (req, res, next) {
         }
         user.username = (req.body.username || user.username)
         user.pwd = (req.body.pwd || user.pwd)
+        user.wallet = (req.body.wallet || user.wallet)
         user.save(function (err) {
             if (err) { return next(err) }
             res.status(200).json(user);

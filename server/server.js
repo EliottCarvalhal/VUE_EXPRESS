@@ -3,6 +3,7 @@ var mongoose = require('mongoose')
 var history = require('connect-history-api-fallback');
 
 var userCon = require('./controllers/usersCon')
+var productCon = require('./controllers/productCon')
 
 var mongoURL = 'mongodb://127.0.0.1:27017' || 'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2'
 
@@ -52,9 +53,9 @@ app.use(function (req, res, next) {
 });
 
 
-// app.use <-- requries a middleware function error
+// app.use <-- requries a middleware function error, add module.exports = router in bottom of controller if this error again
 app.use(userCon) 
-
+app.use(productCon)
 
 
 app.get('/api', function(req,res) {
@@ -63,7 +64,7 @@ app.get('/api', function(req,res) {
 
 // catch weird req's
 app.use('/api/*', function (req, res) {
-    res.status(404).json({ 'message': 'Not Found' });
+    res.status(404).json({ 'message': 'Bad request, API path not found' });
 });
 
 // Error handler (i.e., when exception is thrown) must be registered last
