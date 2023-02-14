@@ -4,5 +4,6 @@ Simple SPA web development
 
 Node / Express  / Vue 
 
-![alt text] (https://i.ibb.co/YdkLQ6L/Screenshot-2023-02-14-193634.png)
 ![Screenshot](https://i.ibb.co/YdkLQ6L/Screenshot-2023-02-14-193634.png)
+
+![Screenshot](https://i.ibb.co/dGGMzbB/image.png)
